@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>yuetu</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<title>yuetu</title>
+		<style>
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				font-size: 13px;
+			}
+			
+			.nav {
+				position: relative;
+				color: #fff;
+				background-color: rgb(255, 148, 171);
+				text-align: center;
+			}
+			
+			.nav-left {
+				position: absolute;
+				top: 9px;
+				left: 15px;
+				font-size: 13px;
+				color: #fff;
+			}
+			
+			.nav-left i {
+				display: inline-block;
+				width: 12px;
+				height: 6px;
+				margin-left: 5px;
+				margin-bottom: 1px;
+				background-image: url(static/img/downicon.png);
+				background-size: 12px 6px;
+				font: none;
+			}
+			
+			.nav-middle {
+				padding: 5px 0 10px 0;
+				font-size: 18px;
+				font-weight: bold;
+			}
+			
+			.nav-right {
+				position: absolute;
+				top: 5px;
+				right: 15px;
+				width: 20px;
+				height: 20px;
+				background-image: url(static/img/telphone.png);
+				background-size: 20px 20px;
+			}
+		</style>
+		<link rel="stylesheet" href="../node-modules/vue-swipe/dist/vue-swipe.css" charset="utf-8">
+
+	</head>
+
+	<body>
+		<!--<div id="app"></div>-->
+		<!-- built files will be auto injected -->
+		<div class="home">
+			<div class="nav">
+				<div class="nav-left">全国<i></i></div>
+				<div class="nav-middle">首页 </div>
+				<div class="nav-right"></div>
+			</div>
+			<div></div>
+		</div>
+
+	</body>
+	<script src="../node-modules/vue-swipe/dist/vue-swipe.js"></script>
+
+	<script>
+		const vueSwipe = VueSwipe.Swipe;
+		const vueSwipeItem = VueSwipe.SwipeItem;
+
+		new Vue({
+			el: 'body',
+			components: {
+				'swipe': vueSwipe,
+				'swipe-item': vueSwipeItem
+			}
+		});
+	</script>
+
 </html>
